@@ -1,0 +1,4 @@
+def main( void ){
+    def foo = int := 0
+    return foo
+}

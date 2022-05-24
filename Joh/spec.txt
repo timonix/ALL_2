@@ -1,0 +1,93 @@
+FUNCTIONS ARE GLOBAL
+
+constants
+5.6         #const float
+4           #const int
+-6.5D       #const double
+812L        #const long
+[0..1]      #const integer array
+[1,2,3]     #const integer array
+[4,5,6]L    #const long array
+[1.0,2,3]   #const float array
+[4.1,4.2]D  #const double array
+------------------------
+-  variables
+foo
+foo[1]
+foo[0..2]
+foo[0,2,3,4]
+------------------------
+-  OPERATIONS
++   #add
+-   #sub
+*   #mul
+/   #div (only with constant)
+^   #xor
+|   #or
+&   #and
+!^  #xnor
+!|  #nor
+!&  #nand
+==  #equals
+>=  #greater or equal
+>   #greater than
+<=  #less or equal
+<   #less than
+>>  #shift right
+<<  #shift left
+------------------------
+-  expressions
+4.5             #constant
+foo             #variable
+foo*            #variable pointer
+
+!foo            #OP variable
+!5              #OP constant          # CAN BE COMPRESSED AT COMPILE TIME
+6.5*3           #constant OP constant # CAN BE COMPRESSED AT COMPILE TIME
+[1.0,2,3]+foo[0..2]   #constant OP variable
+foo[0..1]-[2..3]      #variable OP constant
+foo*bar         #variable OP variable
+fun(foo,1)      #function
+
+------------------------
+-  ASSIGNMENT
+foo = expression    #assign to variable
+------------------------
+-  FOR
+for(element:ARRAY)  #for element in array
+------------------------
+-  DEFINE
+def foo = int
+def foo = double
+def foo = long[1]
+def foo = float[100]
+
+def foo = int := 1  #define with initial value
+
+defines goes on top of the local scope
+----------------------------
+-  FUNCTIONS
+functions are defined at top scope and are global
+all functions must return a single int
+
+def fun(a*,b,c){
+    def foo = int
+    foo = 5+1
+    return foo
+}
+
+----------------------------
+bar[0..1] = foo[0..1]-[2..3]
+equals
+bar[0] = foo[0]-2
+bar[1] = foo[1]-3
+
+
+
+
+
+
+
+
+
+

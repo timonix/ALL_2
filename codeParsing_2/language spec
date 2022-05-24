@@ -1,0 +1,33 @@
+- variables are defined at the top of scope
+- structs are defined globally
+
+indexing into struct is done with .
+
+struct Books {
+   int  book_id;
+   double  cost;
+   int  title[25];
+};
+
+books.book_id = 5;
+
+indexing into array is done with []
+
+books.title[0]
+
+array lengths are fixed and can be accessed with .len
+
+books.title.len
+
+comments are done with //
+
+a = books.title.len //this is a comment
+
+------ Functions --------
+functions are global and static
+
+main function marks entry point
+
+main(){
+
+}

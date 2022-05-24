@@ -1,0 +1,7 @@
+def main( void ){
+    def foo = int[2] := [0,1]
+    for( j : foo ){
+        j = j+1
+    }
+    return foo
+}

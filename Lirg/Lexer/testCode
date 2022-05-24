@@ -1,0 +1,11 @@
+
+a = 1
+const b = 10
+if(a != 0){
+    for(i : 0 to b;a){
+        a = a+1
+        (a){
+            qq = 1
+        }
+    }
+}

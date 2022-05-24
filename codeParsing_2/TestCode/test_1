@@ -1,0 +1,8 @@
+main()
+{
+    def a = int
+    def b = double
+    def c = int
+
+    c = a + b
+}

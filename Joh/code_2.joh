@@ -1,0 +1,9 @@
+def fun_1(int foo){
+    foo[0..1] = [4,5]
+    return 0
+}
+
+def main( void ){
+    def foo = int[2] := [0,1]
+    return 0
+}

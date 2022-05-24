@@ -1,0 +1,13 @@
+a = 0
+
+main()
+{
+    q = 1
+    fun(q)
+}
+
+fun(a){
+    return a
+}
+
+

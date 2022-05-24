@@ -1,0 +1,42 @@
+REG A/B/PORT,RAM IN (12 ctrl)  TYPE 1
+-------
+000 -> No change
+001 -> PORT
+010 -> B
+011 -> A
+100 -> RAM
+101 -> ROM
+110 -> T
+111 -> INC
+
+MA_H/MA_L/PC_H/PC_L/TIMER (15 ctrl)
+-------
+000 -> No change
+001 -> No change
+010 -> B
+011 -> A
+100 -> RAM
+101 -> ROM
+110 -> T
+111 -> INC
+
+REG T (4 ctrl)
+-------
+0000 -> No change
+0001 -> ADD    //REG A + REG B -> REG T
+0010 -> SUB    //REG A - REG B -> REG T
+0011 -> PASS   //REG A -> REG T
+0100 -> AND    //REG A AND REG B -> REG T
+0101 -> OR     //REG A OR REG B -> REG T
+0110 -> XOR    //REG A XOR REG B -> REG T
+(0111 -> INCA   //REG A + 1 -> REG T)
+1000 -> INVERT //NOT REG T -> REG T
+1001 -> INC    //REG T + 1-> REG T
+1010 -> DEC    //REG T - 1 -> REG T
+(1011 -> ROTR   //REG T >> 1-> REG T)
+(1100 -> ROTL   //REG T << 1-> REG T)
+1101 -> SHR    //REG T >> 1-> REG T
+1110 -> SHL    //REG T << 1-> REG T
+
+
+

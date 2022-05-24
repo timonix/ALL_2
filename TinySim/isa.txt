@@ -1,0 +1,39 @@
+LDI    #imm, Target // Imm -> target register
+LDI_0   target      // 0 ->   target register
+LDI_1   target      // 1 ->   target register
+
+LDA                 //Ram out (RO) ->   REG A (A)
+
+MOV    src, target  //Source -> Target
+
+JMP   cond          //PC high (PC_H),PC low (PC_L) -> PC, if condition is met
+JMPI  cond, #Imm    //PC high (PC_H), Imm -> PC , if condition is met
+
+
+ADD                 //REG A + REG B -> REG T
+SUB                 //REG A - REG B -> REG T
+(INC                //REG A + 1 -> REG T )
+(DEC                //REG A - 1 -> REG T )
+PASS                //REG A -> REG T
+AND                 //REG A AND REG B -> REG T
+OR                  //REG A OR REG B -> REG T
+XOR                 //REG A XOR REG B -> REG T
+INVERT              //NOT REG T -> REG T
+
+SHIFT R
+SHIFT L
+ROT R
+ROT L
+
+--------------------------
+Valid Targets
+PORT, A, B, RI, PC_H, PC_L, MA_H, MA_L, TIMER
+
+Valid Sources
+PORT, A, B, T
+
+Valid Conditions
+A > B
+B < A
+A = B
+TIMER = 0
